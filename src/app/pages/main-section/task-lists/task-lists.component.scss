@@ -1,0 +1,11 @@
+@import 'mixins';
+@import 'vars';
+.task-lists {
+    @include display-flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 2em;
+    app-task {
+        width: 100%;
+    }
+}

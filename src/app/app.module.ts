@@ -12,6 +12,8 @@ import { ThemeSwitcherComponent } from './pages/main-section/user-section/theme-
 import { AddTaskComponent } from './pages/main-section/add-task/add-task.component';
 
 import { SharedModule } from '@app/shared/shared.module';
+import { TaskListsComponent } from './pages/main-section/task-lists/task-lists.component';
+import { TaskComponent } from './pages/main-section/task-lists/task/task.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SharedModule } from '@app/shared/shared.module';
     HeaderComponent,
     UserSectionComponent,
     ThemeSwitcherComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    TaskListsComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,

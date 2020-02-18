@@ -1,0 +1,126 @@
+@import 'mixins';
+@import 'vars';
+.todo {
+    @include display-flex;
+    width: 100%;
+    height: 20em;
+    background-color: $cardBgColor;
+    margin: 1em auto;
+    @include border-rad-1em;
+    @include smooth-anim-2s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    .left-side {
+        width: 20%;
+        height: 100%;
+        .icon-container {
+            @include relative-centre;
+            @include border-rad-1em;
+            top: 30%;
+            width: 6em;
+            height: 6em;
+            background: $thumbnail;
+            svg {
+                font-size: 3em;
+                color: $textColor;
+                @include relative-centre;
+            }
+        }
+    }
+    .right-side {
+        width: 85%;
+        height: 100%;
+        padding: 1.6em;
+        .todo-header {
+            @include display-flex;
+            align-items: center;
+            width: 100%;
+            .todo-title-header {
+                @include display-flex;
+                align-items: center;
+                width: 50%;
+                .todo-title {
+                    margin-right: 1em;
+                }
+            }
+            .todo-action {
+                @include display-flex;
+                justify-content: space-evenly;
+                width: 50%;
+                align-items: center;
+                .status-selector {
+                    width: 60%;
+                }
+                >svg {
+                    cursor: pointer;
+                    @include smooth-anim-2s;
+                    // color: $actionButton;
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                    &.fa-trash-alt:hover {
+                        color: $deleteButton;
+                    }
+                    &.fa-undo-alt:hover {
+                        color: $actionButtonHover;
+                    }
+                    &.fa-plus:hover {
+                        color: #4D18FF;
+                    }
+                }
+            }
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        .list-slides-container {
+            margin-top: 1em;
+            .list {
+                @include smooth-anim-2s;
+                .edit {
+                    background: transparent;
+                    border: 1px solid blue;
+                    border-radius: 6px;
+                    color: $textColor;
+                    padding: 20px;
+                }
+                .list-item {
+                    @include display-flex;
+                    align-items: center;
+                    .list-title {
+                        width: 90%;
+                    }
+                    .list-actions {
+                        @include display-flex;
+                        width: 10%;
+                        justify-content: space-evenly;
+                        >svg {
+                            cursor: pointer;
+                            @include smooth-anim-2s;
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                            &.fa-trash-alt:hover {
+                                color: $deleteButton;
+                            }
+                            &.fa-edit:hover {
+                                transform: scale(1.2);
+                                color: #4D18FF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slick-arrow {
+            display: none !important;
+        }
+        .slick-dots li button:before {
+            color: $textColor;
+            font-size: 0.7rem;
+        }
+        // @import "list-style.scss";
+    }
+}

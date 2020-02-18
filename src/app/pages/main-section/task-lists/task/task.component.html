@@ -1,0 +1,28 @@
+<div class="todo" id="1">
+    <div class="left-side">
+        <div class="icon-container">
+            <fa-icon [icon]="faListUl"></fa-icon>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="todo-header">
+            <div class="todo-title-header">
+                <h1 class="todo-title"></h1>
+            </div>
+            <div class="todo-action">
+                <div class="status-selector">
+                    <!-- select component -->
+                </div>
+                <fa-icon [icon]="faPlus"></fa-icon>
+                <fa-icon [icon]="faUndoAlt"></fa-icon>
+                <fa-icon [icon]="faTrashAlt"></fa-icon>
+            </div>
+        </div>
+        <div class="list-slides-container">
+            <!-- <Slider {...settings}>
+                { this.createChunkLists(todo.lists, chunk).map((list, index, lists) => (
+                <ListsSlide key={todo.id + "slide" + index} lists={list} todoId={todo.id} deleteList={deleteList} editList={editList} changeListStatus={changeListStatus} /> )) }
+            </Slider> -->
+        </div>
+    </div>
+</div>
