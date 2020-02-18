@@ -1,0 +1,56 @@
+@import 'mixins';
+@import 'vars';
+.theme-switch-wrapper {
+    @include display-flex;
+    align-items: center;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    width: 45px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: $thumbnail;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    content: "";
+    background-color: #fff;
+    height: 20px;
+    position: absolute;
+    transition: .4s;
+    width: 20px;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
+
+input:checked+.slider {
+    background-color: $lightHeaderBgColor;
+}
+
+input:checked+.slider:before {
+    left: 50%;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

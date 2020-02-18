@@ -1,0 +1,34 @@
+@import 'mixins';
+@import 'vars';
+.user-section {
+    @include display-flex;
+    width: 100%;
+    height: 100%;
+    .user-name {
+        width: 80%;
+        height: 100%;
+        line-height: 4em;
+        h1 {
+            font-size: 2em;
+        }
+    }
+    .user-settings {
+        width: 20%;
+        height: 100%;
+        line-height: 4em;
+        ul {
+            @include display-flex;
+            font-size: 1.5em;
+            justify-content: flex-start;
+            li {
+                margin: auto 0.5em;
+                cursor: pointer;
+                color: $textColor;
+                @include smooth-anim-2s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

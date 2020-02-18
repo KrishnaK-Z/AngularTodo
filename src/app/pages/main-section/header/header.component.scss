@@ -1,0 +1,111 @@
+@import 'mixins';
+@import 'vars';
+header {
+    @include display-flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $cardBgColor;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 1.2em 0em;
+    .header-container {
+        @include display-flex;
+        width: 70%;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        .search-form {
+            width: 80%;
+            // max-width: 790px;
+            .inner-form {
+                width: 100%;
+                .input-field {
+                    width: 100%;
+                    position: relative;
+                    .btn-search {
+                        @include display-flex;
+                        width: 33px;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        position: absolute;
+                        left: 0;
+                        height: 100%;
+                        background: transparent;
+                        border: 0;
+                        padding: 0;
+                        cursor: pointer;
+                        -ms-flex-pack: flex-start;
+                        justify-content: flex-start;
+                        svg {
+                            color: $textColor;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        background: transparent;
+                        border: 0;
+                        display: block;
+                        padding-left: 2em;
+                        font-size: 18px;
+                        color: $textColor;
+                        border-radius: 34px;
+                    }
+                }
+            }
+        }
+    }
+    .settings {
+        width: 20%;
+        position: relative;
+        >ul {
+            @include display-flex;
+            -ms-flex-pack: flex-end;
+            justify-content: flex-end;
+            -ms-flex-align: center;
+            align-items: center;
+            >li {
+                margin: 0.5em;
+                cursor: pointer;
+                @include smooth-anim-2s;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .setting-container {
+            .setting-menu {
+                position: absolute;
+                top: 100%;
+                border: 1px solid $darkBgColor;
+                border-radius: 4px;
+                padding: 0;
+                margin: 2px 0 0 0;
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+                background-color: $cardBgColor;
+                list-style-type: none;
+                color: $textColor;
+                display: none;
+                // @include smooth-anim-2s;
+                >li {
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    white-space: nowrap;
+                    &:hover {
+                        background-color: $thumbnail;
+                    }
+                    svg {
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+            &:hover {
+                .setting-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+}

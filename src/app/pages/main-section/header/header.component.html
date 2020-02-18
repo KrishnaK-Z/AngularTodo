@@ -1,0 +1,42 @@
+<header class="header">
+    <div class="header-container">
+        <form class="search-form">
+            <fieldset>
+                <div class="inner-form">
+                    <div class="input-field">
+                        <button class="btn-search" type="button">
+                            <fa-icon [icon]="faSearch"></fa-icon>
+                        </button>
+                        <!-- TODO need to work on autocomplete -->
+                        <input id="search" type="text" placeholder="search anything" autocomplete="off" />
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="settings">
+            <ul>
+                <li>
+                    <fa-icon [icon]="faPlusSquare"></fa-icon>
+                </li>
+                <li>
+                    <fa-icon [icon]="faBell"></fa-icon>
+                </li>
+                <li>
+                    <div class="setting-container">
+                        <fa-icon [icon]="faCog"></fa-icon>
+                        <!-- <ul class="setting-menu">
+                            <li>
+                                <fa-icon [icon]="faUser"></fa-icon>
+                                Profile
+                            </li>
+                            <li>
+                                <fa-icon [icon]="faSignOutAlt"></fa-icon>
+                                Sign Out
+                            </li>
+                        </ul> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

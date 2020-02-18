@@ -1,0 +1,23 @@
+@import 'mixins';
+@import 'vars';
+.add-todo {
+    @include display-flex;
+    width: 100%;
+    height: 4em;
+    margin-top: 1em;
+    @include border-rad-1em;
+    background-color: $thumbnail;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    app-todo-input {
+        width: 90%;
+    }
+    .new-todo-btn {
+        width: 10%;
+        color: $textColor;
+        @include rm-bg-border;
+        @include smooth-anim-2s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
